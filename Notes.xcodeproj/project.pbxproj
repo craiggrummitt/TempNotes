@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F710B883A923BEEB02FD4C5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AA037E5E027171B75854B4 /* libPods.a */; };
 		181F3F571B4840B400CAB180 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F561B4840B400CAB180 /* main.m */; };
 		181F3F5A1B4840B400CAB180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F591B4840B400CAB180 /* AppDelegate.m */; };
 		181F3F5D1B4840B400CAB180 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F5C1B4840B400CAB180 /* ViewController.m */; };
-		181F3F601B4840B400CAB180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181F3F5E1B4840B400CAB180 /* Main.storyboard */; };
 		181F3F621B4840B400CAB180 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181F3F611B4840B400CAB180 /* Images.xcassets */; };
 		181F3F651B4840B400CAB180 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181F3F631B4840B400CAB180 /* LaunchScreen.xib */; };
 		181F3F711B4840B400CAB180 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F701B4840B400CAB180 /* NotesTests.m */; };
@@ -34,12 +34,14 @@
 		181F3F591B4840B400CAB180 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		181F3F5B1B4840B400CAB180 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		181F3F5C1B4840B400CAB180 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		181F3F5F1B4840B400CAB180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		181F3F611B4840B400CAB180 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		181F3F641B4840B400CAB180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		181F3F6A1B4840B400CAB180 /* NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181F3F6F1B4840B400CAB180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181F3F701B4840B400CAB180 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
+		54AA037E5E027171B75854B4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C048CAFEC301C024C0FBDDD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9FD57401DB8875A7D995CB4F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F710B883A923BEEB02FD4C5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14E046133E650D3AA920ACE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54AA037E5E027171B75854B4 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		181F3F481B4840B400CAB180 = {
 			isa = PBXGroup;
 			children = (
 				181F3F531B4840B400CAB180 /* Notes */,
 				181F3F6D1B4840B400CAB180 /* NotesTests */,
 				181F3F521B4840B400CAB180 /* Products */,
+				FFF479908F410AE5FBBB014B /* Pods */,
+				14E046133E650D3AA920ACE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,7 +98,6 @@
 				181F3F591B4840B400CAB180 /* AppDelegate.m */,
 				181F3F5B1B4840B400CAB180 /* ViewController.h */,
 				181F3F5C1B4840B400CAB180 /* ViewController.m */,
-				181F3F5E1B4840B400CAB180 /* Main.storyboard */,
 				181F3F611B4840B400CAB180 /* Images.xcassets */,
 				181F3F631B4840B400CAB180 /* LaunchScreen.xib */,
 				181F3F541B4840B400CAB180 /* Supporting Files */,
@@ -119,6 +131,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FFF479908F410AE5FBBB014B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FD57401DB8875A7D995CB4F /* Pods.debug.xcconfig */,
+				9C048CAFEC301C024C0FBDDD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 181F3F741B4840B400CAB180 /* Build configuration list for PBXNativeTarget "Notes" */;
 			buildPhases = (
+				521F3FE6B5457D84F365F9FD /* Check Pods Manifest.lock */,
 				181F3F4D1B4840B400CAB180 /* Sources */,
 				181F3F4E1B4840B400CAB180 /* Frameworks */,
 				181F3F4F1B4840B400CAB180 /* Resources */,
+				99103FF6FFEDACDAB952F46E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181F3F601B4840B400CAB180 /* Main.storyboard in Resources */,
 				181F3F651B4840B400CAB180 /* LaunchScreen.xib in Resources */,
 				181F3F621B4840B400CAB180 /* Images.xcassets in Resources */,
 			);
@@ -213,6 +235,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		521F3FE6B5457D84F365F9FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99103FF6FFEDACDAB952F46E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		181F3F4D1B4840B400CAB180 /* Sources */ = {
@@ -244,14 +299,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		181F3F5E1B4840B400CAB180 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				181F3F5F1B4840B400CAB180 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		181F3F631B4840B400CAB180 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -347,6 +394,7 @@
 		};
 		181F3F751B4840B400CAB180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FD57401DB8875A7D995CB4F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Notes/Info.plist;
@@ -357,6 +405,7 @@
 		};
 		181F3F761B4840B400CAB180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C048CAFEC301C024C0FBDDD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Notes/Info.plist;
@@ -418,6 +467,7 @@
 				181F3F761B4840B400CAB180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		181F3F771B4840B400CAB180 /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +476,7 @@
 				181F3F791B4840B400CAB180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
