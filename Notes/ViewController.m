@@ -42,6 +42,7 @@
     
     //Customize titleTextField
     self.titleTextField.borderStyle = UITextBorderStyleRoundedRect;
+    self.titleTextField.delegate = self;
     
     //Customize titleLabel
     self.titleLabel.text = @"Title:";
@@ -78,6 +79,17 @@
 -(void) tappedSave:(UIButton*)sender {
     NSLog(@"Tapped save");
 }
+
+#pragma mark: UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.titleTextField) {
+        [textField resignFirstResponder];
+        [self.detailTextView becomeFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
