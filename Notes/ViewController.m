@@ -14,9 +14,15 @@
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UITextField *titleTextField;
 @property (strong, nonatomic) UITextView *detailTextView;
+
 @end
 
 @implementation ViewController
+
+CGFloat horizontalMargin = 20;
+CGFloat verticalMargin = 20;
+CGFloat horizontalSpace = 10;
+CGFloat verticalSpace = 10;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,10 +55,6 @@
     [self.titleLabel sizeToFit];
     
     //Set up Masonry constraints
-    CGFloat horizontalMargin = 20;
-    CGFloat verticalMargin = 20;
-    CGFloat horizontalSpace = 10;
-    CGFloat verticalSpace = 10;
     
     [self.saveButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.view.mas_right).with.offset(-horizontalMargin);
@@ -78,6 +80,32 @@
 
 -(void) tappedSave:(UIButton*)sender {
     NSLog(@"Tapped save");
+}
+
+#pragma mark: NSNotifications
+-(void)viewDidAppear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+}
+-(void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)keyboardWasShown:(NSNotification*)notification {
+    CGFloat keyboardHeight = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
+    [self.detailTextView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-keyboardHeight-verticalMargin);
+    }];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)notification {
+    [self.detailTextView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-verticalMargin);
+    }];
 }
 
 #pragma mark: UITextFieldDelegate
