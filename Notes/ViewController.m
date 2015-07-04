@@ -78,8 +78,46 @@ CGFloat verticalSpace = 10;
     }];
 }
 
+#pragma mark: Saving
 -(void) tappedSave:(UIButton*)sender {
-    NSLog(@"Tapped save");
+    if (self.titleTextField.text.length > 0 && self.detailTextView.text.length > 0) {
+        //We have data to save, let's save it!
+        [self saveNote];
+    } else {
+        //No data to save!
+        [self noDataToSave];
+    }
+}
+-(void)saveNote {
+    
+}
+-(void)noDataToSave {
+    NSString *wheresTheProblem;
+    if (self.titleTextField.text.length == 0 && self.detailTextView.text.length == 0) {
+        wheresTheProblem = @"title and note text fields";
+    } else if (self.titleTextField.text.length == 0) {
+        wheresTheProblem = @"title text field";
+    } else {
+        wheresTheProblem = @"note text field";
+    }
+    NSString *theProblem = [NSString stringWithFormat:@"A note can only be saved if there is text in the %@.",wheresTheProblem];
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Save problem"
+                                                                   message:theProblem
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        if (self.titleTextField.text.length == 0) {
+            [self.titleTextField becomeFirstResponder];
+        } else {
+            [self.detailTextView becomeFirstResponder];
+        }
+    }];
+    
+    [alert addAction:defaultAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
 }
 
 #pragma mark: NSNotifications
