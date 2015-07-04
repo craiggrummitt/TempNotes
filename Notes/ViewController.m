@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
+#import "Note.h"
+#import "Model.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIButton *saveButton;
@@ -76,6 +78,11 @@ CGFloat verticalSpace = 10;
         make.left.equalTo(self.view.mas_left).with.offset(horizontalMargin);
         make.right.equalTo(self.view.mas_right).with.offset(-horizontalMargin);
     }];
+    
+    //Load note
+    Note *note = [[Model sharedModel] loadNote];
+    self.titleTextField.text = note.title;
+    self.detailTextView.text = note.detail;
 }
 
 #pragma mark: Saving
@@ -89,7 +96,8 @@ CGFloat verticalSpace = 10;
     }
 }
 -(void)saveNote {
-    
+    Note *note = [[Note alloc] initWithTitle:self.titleTextField.text detail:self.detailTextView.text];
+    [[Model sharedModel] saveNote:note];
 }
 -(void)noDataToSave {
     NSString *wheresTheProblem;

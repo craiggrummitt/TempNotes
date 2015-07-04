@@ -14,6 +14,8 @@
 		181F3F621B4840B400CAB180 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181F3F611B4840B400CAB180 /* Images.xcassets */; };
 		181F3F651B4840B400CAB180 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181F3F631B4840B400CAB180 /* LaunchScreen.xib */; };
 		181F3F711B4840B400CAB180 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F701B4840B400CAB180 /* NotesTests.m */; };
+		181F3F7C1B4864E400CAB180 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F7B1B4864E400CAB180 /* Model.m */; };
+		181F3F7F1B4868EE00CAB180 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F7E1B4868EE00CAB180 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,10 @@
 		181F3F6A1B4840B400CAB180 /* NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181F3F6F1B4840B400CAB180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181F3F701B4840B400CAB180 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
+		181F3F7A1B4864E400CAB180 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		181F3F7B1B4864E400CAB180 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		181F3F7D1B4868EE00CAB180 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		181F3F7E1B4868EE00CAB180 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		54AA037E5E027171B75854B4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C048CAFEC301C024C0FBDDD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9FD57401DB8875A7D995CB4F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +107,10 @@
 				181F3F611B4840B400CAB180 /* Images.xcassets */,
 				181F3F631B4840B400CAB180 /* LaunchScreen.xib */,
 				181F3F541B4840B400CAB180 /* Supporting Files */,
+				181F3F7A1B4864E400CAB180 /* Model.h */,
+				181F3F7B1B4864E400CAB180 /* Model.m */,
+				181F3F7D1B4868EE00CAB180 /* Note.h */,
+				181F3F7E1B4868EE00CAB180 /* Note.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -274,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F3F7F1B4868EE00CAB180 /* Note.m in Sources */,
 				181F3F5D1B4840B400CAB180 /* ViewController.m in Sources */,
 				181F3F5A1B4840B400CAB180 /* AppDelegate.m in Sources */,
 				181F3F571B4840B400CAB180 /* main.m in Sources */,
+				181F3F7C1B4864E400CAB180 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
