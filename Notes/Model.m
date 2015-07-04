@@ -20,11 +20,23 @@
     return modelSingleton;
 }
 -(void)saveNote:(Note *)note {
-    //note should be saved here
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:note.title forKey:@"title"];
+    [defaults setObject:note.detail forKey:@"detail"];
+    [defaults synchronize];
 }
 -(Note *)loadNote {
-    //return a blank note for now
-    Note *note = [[Note alloc] initWithTitle:@"" detail:@""];
+    //note should be saved here
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *title = [defaults stringForKey:@"title"];
+    NSString *detail = [defaults stringForKey:@"detail"];
+    Note *note;
+    if (title && detail) {
+        note = [[Note alloc] initWithTitle:title detail:detail];
+    } else {
+        note = [[Note alloc] initWithTitle:@"" detail:@""];
+    }
     return note;
+
 }
 @end
