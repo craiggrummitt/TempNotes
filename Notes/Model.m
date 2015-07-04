@@ -26,7 +26,6 @@
     [defaults synchronize];
 }
 -(Note *)loadNote {
-    //note should be saved here
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *title = [defaults stringForKey:@"title"];
     NSString *detail = [defaults stringForKey:@"detail"];
