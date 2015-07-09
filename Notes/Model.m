@@ -7,6 +7,7 @@
 //
 
 #import "Model.h"
+#import "Notes.h"
 #import "Note.h"
 
 @implementation Model
@@ -19,7 +20,37 @@
     });
     return modelSingleton;
 }
--(void)saveNote:(Note *)note {
+
+-(Notes *)notes {
+    if (!_notes) {
+       /* _notes = [[Notes alloc] initWithNotes:@[
+                                                [[Note alloc] initWithTitle:@"First note" detail:@"Here's some detail"],
+                                                [[Note alloc] initWithTitle:@"Second note" detail:@"Here's some more detail"]
+                                                ]
+                  ];*/
+        _notes = [[Notes alloc] initWithNotes:[self loadNotes]];
+    }
+    return _notes;
+}
+
+
+-(void)saveNotes {
+    [NSKeyedArchiver archiveRootObject:self.notes.notes toFile:[self filePath]];
+}
+-(NSArray *)loadNotes {
+    NSArray *notesArray = [NSKeyedUnarchiver unarchiveObjectWithFile:[self filePath]];
+    if (!notesArray) {
+        notesArray = @[];
+    }
+    return(notesArray);
+}
+-(NSString *)filePath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    return ([documentsDirectoryPath stringByAppendingPathComponent:@"appData"]);
+}
+
+/*-(void)saveNote:(Note *)note {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:note.title forKey:@"title"];
     [defaults setObject:note.detail forKey:@"detail"];
@@ -37,5 +68,5 @@
     }
     return note;
 
-}
+}*/
 @end

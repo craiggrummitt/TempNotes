@@ -16,6 +16,8 @@
 		181F3F711B4840B400CAB180 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F701B4840B400CAB180 /* NotesTests.m */; };
 		181F3F7C1B4864E400CAB180 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F7B1B4864E400CAB180 /* Model.m */; };
 		181F3F7F1B4868EE00CAB180 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F3F7E1B4868EE00CAB180 /* Note.m */; };
+		18E36E3D1B4D7E4100CB16D5 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E3C1B4D7E4100CB16D5 /* Notes.m */; };
+		18E36E401B4D8F1800CB16D5 /* NotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E3F1B4D8F1800CB16D5 /* NotesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		181F3F7B1B4864E400CAB180 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		181F3F7D1B4868EE00CAB180 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		181F3F7E1B4868EE00CAB180 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		18E36E3B1B4D7E4100CB16D5 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		18E36E3C1B4D7E4100CB16D5 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
+		18E36E3E1B4D8F1800CB16D5 /* NotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesTableViewController.h; sourceTree = "<group>"; };
+		18E36E3F1B4D8F1800CB16D5 /* NotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTableViewController.m; sourceTree = "<group>"; };
 		54AA037E5E027171B75854B4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C048CAFEC301C024C0FBDDD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9FD57401DB8875A7D995CB4F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,15 +108,11 @@
 			children = (
 				181F3F581B4840B400CAB180 /* AppDelegate.h */,
 				181F3F591B4840B400CAB180 /* AppDelegate.m */,
-				181F3F5B1B4840B400CAB180 /* ViewController.h */,
-				181F3F5C1B4840B400CAB180 /* ViewController.m */,
 				181F3F611B4840B400CAB180 /* Images.xcassets */,
 				181F3F631B4840B400CAB180 /* LaunchScreen.xib */,
 				181F3F541B4840B400CAB180 /* Supporting Files */,
-				181F3F7A1B4864E400CAB180 /* Model.h */,
-				181F3F7B1B4864E400CAB180 /* Model.m */,
-				181F3F7D1B4868EE00CAB180 /* Note.h */,
-				181F3F7E1B4868EE00CAB180 /* Note.m */,
+				18E36E411B4DD75D00CB16D5 /* Model */,
+				18E36E421B4DD76B00CB16D5 /* ViewControllers */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -139,6 +141,30 @@
 				181F3F6F1B4840B400CAB180 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18E36E411B4DD75D00CB16D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				181F3F7A1B4864E400CAB180 /* Model.h */,
+				181F3F7B1B4864E400CAB180 /* Model.m */,
+				181F3F7D1B4868EE00CAB180 /* Note.h */,
+				181F3F7E1B4868EE00CAB180 /* Note.m */,
+				18E36E3B1B4D7E4100CB16D5 /* Notes.h */,
+				18E36E3C1B4D7E4100CB16D5 /* Notes.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		18E36E421B4DD76B00CB16D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				181F3F5B1B4840B400CAB180 /* ViewController.h */,
+				181F3F5C1B4840B400CAB180 /* ViewController.m */,
+				18E36E3E1B4D8F1800CB16D5 /* NotesTableViewController.h */,
+				18E36E3F1B4D8F1800CB16D5 /* NotesTableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FFF479908F410AE5FBBB014B /* Pods */ = {
@@ -287,6 +313,8 @@
 				181F3F7F1B4868EE00CAB180 /* Note.m in Sources */,
 				181F3F5D1B4840B400CAB180 /* ViewController.m in Sources */,
 				181F3F5A1B4840B400CAB180 /* AppDelegate.m in Sources */,
+				18E36E3D1B4D7E4100CB16D5 /* Notes.m in Sources */,
+				18E36E401B4D8F1800CB16D5 /* NotesTableViewController.m in Sources */,
 				181F3F571B4840B400CAB180 /* main.m in Sources */,
 				181F3F7C1B4864E400CAB180 /* Model.m in Sources */,
 			);
